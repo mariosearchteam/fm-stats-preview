@@ -129,15 +129,15 @@ main {
 
 .card {
   grid-template-columns: 1fr;
-  background-color: var(--clr-primary-800);
+  background-color: var(--clr-primary-500);
   border-radius: var(--br);
   padding: 0;
   text-align: center;
   &__image {
-    background: url("./images/image-header-mobile.jpg"),
-      hsla(277, 70%, 40%, 0.8);
+    background: url("./images/image-header-mobile.jpg");
     background-size: cover;
-    background-blend-mode: overlay;
+    mix-blend-mode: multiply;
+    opacity: 0.8;
     filter: contrast(75%);
     height: 16rem;
     border-radius: var(--br) var(--br) 0 0;
@@ -145,6 +145,7 @@ main {
   &__content {
     margin-top: var(--spacer-md);
     padding: 0 var(--spacer-md);
+    background: var(--clr-primary-800);
   }
 
   &__heading {
